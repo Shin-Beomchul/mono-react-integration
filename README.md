@@ -15,12 +15,12 @@
 
 ---
 
-**생성 명령어 예시**
+## 실행방법
 ```bash
 /insight-generator "AI Agent들을 등록/판매하는 솔루션 서비스 생성해줘. https://huggingface.co와 유사하게 만들어주고, 빠르게 시장에 진입해 수익화 할 수 있는 수익모델로 고려해줘"
 ```
 
-**Agent생성 결과**
+## Agent실행 결과
 - React 웹서비스: [http://localhost:5179](http://localhost:5179/)
 - 수익화 전략이 포함된 생성 서비스 소개 문서: [http://localhost:4100/docs/category/agenthub](http://localhost:4100/docs/category/agenthub)
 
@@ -510,17 +510,6 @@ flowchart TB
     style Packages fill:#fff3e0,stroke:#333
     style Swarm fill:#e8f5e9,stroke:#333
     style Claude fill:#fce4ec,stroke:#333
-```
-
----
-
-## 7. 실행 방법
-
-### 7.1 파이프라인 실행
-
-```bash
-# Claude Code CLI에서 실행
-/insight-generator "/insight-generator "AI Agent들을 등록/판매하는 솔루션 서비스 생성해줘. https://huggingface.co와 유사하게 만들어주고, 빠르게 시장에 진입해 수익화 할 수 있는 수익모델로 고려해줘"
 ```
 
 ---

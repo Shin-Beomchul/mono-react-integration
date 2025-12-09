@@ -3,22 +3,91 @@
 ## 1. 개요
 
 가치 있는 서비스를 구상하고 수익을 창출하는 것은 많은 도메인 지식과 경험, 통찰이 필요한 영역입니다.
-이 영역의 문턱을 자동화된 AI로 낮춰 기존 소수의 사람들만이 구상하던 사업 제안을 누구나 추상적인 아이디어만으로 웹서비스를 생성합니다.
+이 영역의 문턱을 자동화된 AI로 낮춰 기존 소수의 사람들만이 구상하던 사업 제안과 구상을 누구나 추상적인 아이디어만으로 웹서비스를 생성합니다.
 
-**Insight Generator**는 사용자의 자연어 요구사항을 입력받아 5단계의 전문 에이전트를 순차적으로 실행하여 완전한 웹 서비스와 문서를 자동 생성하는 **Pipeline Orchestrator** 시스템입니다.
+**Insight Generator**는 사용자의 자연어 요구사항을 입력받아 5단계의 전문 에이전트를 순차적으로 실행하여 완전한 웹 서비스와 문서를 자동 생성하는 **Agentic AI Agent** 시스템입니다.
 
-1. **비즈니스 가치 분석** - 시장 트렌드와 사용자 요구 파악
-2. **서비스 설계** - 구체적인 IT 서비스 기획
-3. **프로젝트 이해** - 기존 코드베이스 구조 분석
-4. **코드 생성** - 실제 동작하는 React 애플리케이션 생성
-5. **문서화** - Docusaurus 기반 종합 문서 생성
+1. **비즈니스 가치 분석 Agent** - 웹검색을 통해 시장 트렌드를 분석하고, 사내 솔루션조회 MCP Server를 통해 기존솔루션 활용을 고려한 비즈니스 계획 수립
+2. **서비스 설계 Agent** - 수립된 비즈니스 계획을 기반으로 구체적인 IT 서비스를 기획
+3. **프로젝트 구조분석 Agent** - 기존 코드베이스 구조 분석
+4. **코드 생성 Agent** - 실제 동작하는 React 애플리케이션 생성
+5. **문서화 Agent** - Docusaurus 기반 종합 문서 생성
 
-이 모든 과정이 자동화되어 개발자는 아이디어에 집중하고, 반복적인 boilerplate 작업은 AI가 처리합니다.
 ---
 
-## 2. 시스템 아키텍처
+**생성 명령어 예시**
+```bash
+/insight-generator "AI Agent들을 등록/판매하는 솔루션 서비스 생성해줘. https://huggingface.co와 유사하게 만들어주고, 빠르게 시장에 진입해 수익화 할 수 있는 수익모델로 고려해줘"
+```
 
-### 2.1 전체 파이프라인 흐름
+**Agent생성 결과**
+- React 웹서비스: [http://localhost:5179](http://localhost:5179/)
+- 수익화 전략이 포함된 생성 서비스 소개 문서: [http://localhost:4100/docs/category/agenthub](http://localhost:4100/docs/category/agenthub)
+
+## 2. 실제 실행 결과물 캡쳐
+
+### 2.1 AgentHub 애플리케이션
+
+AgentHub는 AI 에이전트를 관리하고 배포하는 플랫폼입니다.
+
+#### 홈페이지
+_AgentHub 메인 홈페이지 - AI 에이전트 플랫폼 소개_
+![AgentHub Homepage](./images/agenthub-homepage.png)
+
+
+#### 마켓플레이스
+_에이전트 마켓플레이스 - 다양한 AI 에이전트 검색 및 구매_
+![AgentHub Marketplace](./images/agenthub-marketplace.png)
+
+
+#### 워크스페이스
+_워크스페이스 - 에이전트 관리 및 모니터링_
+![AgentHub Workspace](./images/agenthub-workspace.png)
+
+
+#### 요금제
+_요금제 페이지 - 다양한 구독 플랜 안내_
+![AgentHub Pricing](./images/agenthub-pricing.png)
+
+---
+
+### 2.2 Documentation 사이트
+
+문서화 Agent에 의해 생성된 서비스 소개 사이트이며,playWright MCP를 활용해 실행중인 React AgentHub (http://localhost:5179/) 화면을 캡쳐하고 문서화합니다. 
+
+#### AgentHub 개요
+_AgentHub 개요 문서 - 플랫폼 소개 및 핵심 기능 설명_
+![AgentHub Docs Overview](./images/agenthub-docs-overview.png)
+
+
+#### 마켓플레이스
+_마켓플레이스 문서 - 에이전트 검색, 구매, 판매 가이드_
+![AgentHub Docs Marketplace](./images/agenthub-docs-marketplace.png)
+
+
+#### 워크스페이스
+_워크스페이스 문서 - 에이전트 관리 및 설정 방법_
+![AgentHub Docs Workspace](./images/agenthub-docs-workspace.png)
+
+
+#### 크리에이터 스튜디오
+_크리에이터 스튜디오 문서 - 에이전트 개발 및 배포 가이드_
+![AgentHub Docs Creator Studio](./images/agenthub-docs-creator-studio.png)
+
+
+#### 요금제
+_요금제 문서 - 구독 플랜별 기능 비교_
+![AgentHub Docs Pricing](./images/agenthub-docs-pricing.png)
+
+
+#### 수익 모델 및 수익 창출 방안
+_수익 모델 문서 - 크리에이터 수익 창출 전략 및 정산 안내_
+![AgentHub Docs Revenue Model](./images/agenthub-docs-revenue-model.png)
+
+
+## 3. 시스템 아키텍처
+
+### 3.1 전체 파이프라인 흐름
 
 ```mermaid
 flowchart TB
@@ -68,7 +137,7 @@ flowchart TB
     style A5 fill:#dfe6e9,stroke:#333,stroke-width:2px
 ```
 
-### 2.2 데이터 흐름 상세
+### 3.2 데이터 흐름 상세
 
 ```mermaid
 sequenceDiagram
@@ -128,9 +197,9 @@ sequenceDiagram
 
 ---
 
-## 3. 에이전트 상세 설명
+## 4. 에이전트 상세 설명
 
-### 3.1 Business Planner (비즈니스 플래너)
+### 4.1 Business Planner (비즈니스 플래너)
 
 | 항목          | 내용                                                    |
 | ------------- | ------------------------------------------------------- |
@@ -161,7 +230,7 @@ flowchart LR
     style Process fill:#4ecdc4,stroke:#333
 ```
 
-### 3.2 Service Planner (서비스 플래너)
+### 4.2 Service Planner (서비스 플래너)
 
 | 항목          | 내용                                                 |
 | ------------- | ---------------------------------------------------- |
@@ -192,7 +261,7 @@ flowchart LR
     style Process fill:#45b7d1,stroke:#333
 ```
 
-### 3.3 Repo Analyzer (저장소 분석기)
+### 4.3 Repo Analyzer (저장소 분석기)
 
 | 항목          | 내용                                   |
 | ------------- | -------------------------------------- |
@@ -225,7 +294,7 @@ flowchart LR
 
 > **참고**: `repo-structure.json` 파일이 이미 존재하는 경우 이 단계는 건너뜁니다.
 
-### 3.4 Frontend Generator (프론트엔드 생성기)
+### 4.4 Frontend Generator (프론트엔드 생성기)
 
 | 항목          | 내용                                              |
 | ------------- | ------------------------------------------------- |
@@ -280,7 +349,7 @@ apps/{서비스명}/
 └── tsconfig.json       # TypeScript 설정
 ```
 
-### 3.5 Doc Generator (문서 생성기)
+### 4.5 Doc Generator (문서 생성기)
 
 | 항목          | 내용                                          |
 | ------------- | --------------------------------------------- |
